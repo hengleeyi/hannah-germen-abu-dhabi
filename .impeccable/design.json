@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-15T18:30:00Z",
+  "title": "Design System: Hannah · German lessons in Abu Dhabi",
+  "extensions": {
+    "colorMeta": {
+      "der": { "role": "primary", "displayName": "Der Blue", "canonical": "oklch(52.0% 0.183 264)", "tonalRamp": ["#01135a", "#0d2e82", "#1f49ad", "#3666d5", "#5987ec", "#7da9ff", "#a7cdff", "#d2f2ff"] },
+      "die": { "role": "secondary", "displayName": "Die Rose", "canonical": "oklch(69.9% 0.160 354)", "tonalRamp": ["#3a0a22", "#5c1e3b", "#813357", "#a74974", "#cf6192", "#f37eb1", "#ffa8d4", "#ffd2f7"] },
+      "das": { "role": "tertiary", "displayName": "Das Green", "canonical": "oklch(65.3% 0.131 159)", "tonalRamp": ["#002912", "#004527", "#01633e", "#1b8256", "#30a370", "#60c290", "#91e3b6", "#bfffdd"] },
+      "ink": { "role": "neutral", "displayName": "Indigo Ink", "canonical": "oklch(27.5% 0.064 269)", "tonalRamp": ["#141d3c", "#2b3657", "#475170", "#646e8a", "#838ca4", "#a3aabf", "#c7cdde", "#edf2fd"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#141d3c", "#2b3657", "#475170", "#646e8a", "#838ca4", "#a3aabf", "#c7cdde", "#edf2fd"] },
+      "on-der-soft": { "role": "neutral", "displayName": "Der Haze", "canonical": "#eef2fd" },
+      "die-on-paper": { "role": "secondary", "displayName": "Die Rose on Paper", "canonical": "#c13f7c" },
+      "das-on-paper": { "role": "tertiary", "displayName": "Das Green on Paper", "canonical": "#1f7d52" },
+      "der-soft": { "role": "primary", "displayName": "Der Tint", "canonical": "#e7eefc" },
+      "die-soft": { "role": "secondary", "displayName": "Die Tint", "canonical": "#fdeaf2" },
+      "das-soft": { "role": "tertiary", "displayName": "Das Tint", "canonical": "#e3f5ec" },
+      "das-soft-hover": { "role": "tertiary", "displayName": "Das Tint Hover", "canonical": "#c5ead8" }
+    },
+    "typographyMeta": {
+      "article": { "displayName": "Article", "purpose": "The der/die/das word in every section lockup; the largest recurring type." },
+      "display": { "displayName": "Display", "purpose": "The single h1 and the closing line." },
+      "noun": { "displayName": "Noun", "purpose": "The German noun beside the article in a lockup." },
+      "headline": { "displayName": "Headline", "purpose": "The English gloss under a section lockup, carrying the SEO heading text." },
+      "title": { "displayName": "Title", "purpose": "Step titles, door links, FAQ questions, price-row formats." },
+      "body": { "displayName": "Body", "purpose": "All reading text, 64ch max." },
+      "label": { "displayName": "Label", "purpose": "Nav links, table headers, skill tags, fine print." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The single easing for every transition and the load wipe." },
+      { "name": "field-wipe", "value": "clip-path inset(0 0 100% 0) to inset(0) over 0.9s, staggered 0 / 0.12s / 0.24s", "purpose": "Hero fields wipe in once on load along the article order der, die, das. Off under prefers-reduced-motion." },
+      { "name": "quiz-flood", "value": "clip-path circle(0%) to circle(150%) at the tapped tile over 0.75s", "purpose": "The correct article's colour floods the quiz strip." },
+      { "name": "button-invert", "value": "background-color and color 0.25s", "purpose": "Button fill inverts on hover." },
+      { "name": "arrow-nudge", "value": "transform translateX(4px to 6px) 0.35s", "purpose": "Arrows in buttons and doors slide right on hover." }
+    ],
+    "breakpoints": [
+      { "name": "hero-stack", "value": "1100px" },
+      { "name": "columns-collapse", "value": "860px" },
+      { "name": "phone", "value": "700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink block with a trailing arrow; inverts to white on hover. The booking action.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Book a free online trial <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5.5 19.5 12 13 18.5\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.6em; min-height: 56px; padding: 0 1.5rem; background: #1b2547; color: #fff; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.125rem; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; border: 2px solid #1b2547; border-radius: 0; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn svg { transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-btn:hover { background: #fff; color: #1b2547; } .ds-btn:hover svg { transform: translateX(4px); } .ds-btn:focus-visible { outline: 3px solid #1b2547; outline-offset: 3px; }"
+    },
+    {
+      "name": "Light Button on Der Blue",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "White block for actions on der blue fields; turns transparent on hover.",
+      "html": "<div class=\"ds-der-field\"><a class=\"ds-btn-light\" href=\"#\">Book a free online trial <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5.5 19.5 12 13 18.5\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\"/></svg></a></div>",
+      "css": ".ds-der-field { background: #2f5fd0; padding: 32px; } .ds-btn-light { display: inline-flex; align-items: center; gap: 0.6em; min-height: 56px; padding: 0 1.5rem; background: #fff; color: #1b2547; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.125rem; font-weight: 700; text-decoration: none; border: 2px solid #fff; border-radius: 0; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn-light:hover { background: transparent; color: #fff; } .ds-btn-light:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Lockup",
+      "kind": "custom",
+      "refersTo": "lockup",
+      "description": "Every section header: article huge, German noun on its baseline, English gloss beneath. Colour follows the article.",
+      "html": "<h2 class=\"ds-lockup\"><span lang=\"de\" class=\"ds-lockup-article\">die</span> <span lang=\"de\" class=\"ds-lockup-noun\">Lehrerin</span><span class=\"ds-lockup-gloss\">Your German teacher in Abu Dhabi</span></h2>",
+      "css": ".ds-lockup { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.35em; margin: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; line-height: 0.95; letter-spacing: -0.035em; color: #1b2547; } .ds-lockup-article { font-size: clamp(3rem, 6.2vw, 6rem); color: #c13f7c; } .ds-lockup-noun { font-size: clamp(1.5rem, 2.4vw, 2.25rem); font-weight: 700; letter-spacing: -0.02em; color: #c13f7c; } .ds-lockup-gloss { flex-basis: 100%; margin-top: 1rem; font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }"
+    },
+    {
+      "name": "Article Choice Tiles",
+      "kind": "custom",
+      "refersTo": "article-choice-der",
+      "description": "The quiz's three square answer tiles in the gender colours; lift 4px on hover.",
+      "html": "<div class=\"ds-choices\"><button class=\"ds-choice ds-choice-der\" lang=\"de\">der</button><button class=\"ds-choice ds-choice-die\" lang=\"de\">die</button><button class=\"ds-choice ds-choice-das\" lang=\"de\">das</button></div>",
+      "css": ".ds-choices { display: flex; gap: 10px; } .ds-choice { width: 104px; height: 104px; border: 2px solid #1b2547; border-radius: 0; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; cursor: pointer; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-choice:hover { transform: translateY(-4px); } .ds-choice:focus-visible { outline: 3px solid #1b2547; outline-offset: 3px; } .ds-choice-der { background: #2f5fd0; color: #fff; } .ds-choice-die { background: #e86fa5; color: #1b2547; } .ds-choice-das { background: #33a873; color: #1b2547; }"
+    },
+    {
+      "name": "Ruled Door List",
+      "kind": "nav",
+      "refersTo": "door",
+      "description": "Ruled link rows with a subline and a sliding arrow; the pattern behind doors, facts, ticks, steps and FAQ.",
+      "html": "<ul class=\"ds-doors\"><li><a class=\"ds-door\" href=\"#\"><span>For adults and careers<small>Work, move, pass your exam</small></span><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5.5 19.5 12 13 18.5\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\"/></svg></a></li><li><a class=\"ds-door\" href=\"#\"><span>For children and teens<small>Speaking, grammar, writing</small></span><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5.5 19.5 12 13 18.5\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\"/></svg></a></li></ul>",
+      "css": ".ds-doors { list-style: none; margin: 0; padding: 0; border-top: 2px solid #1b2547; background: #33a873; color: #1b2547; } .ds-door { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0; border-bottom: 2px solid #1b2547; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.5rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: inherit; text-decoration: none; } .ds-door small { display: block; margin-top: 4px; font-family: 'Atkinson Hyperlegible Next', system-ui, sans-serif; font-size: 0.95rem; font-weight: 400; letter-spacing: 0; } .ds-door svg { flex: none; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-door:hover svg { transform: translateX(6px); } .ds-door:focus-visible { outline: 3px solid #1b2547; outline-offset: 3px; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "chip",
+      "refersTo": "skill-tag",
+      "description": "Static ink label for skills covered.",
+      "html": "<ul class=\"ds-skills\"><li>Speaking</li><li>Grammar</li><li>Writing</li></ul>",
+      "css": ".ds-skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; } .ds-skills li { padding: 8px 14px; background: #1b2547; color: #fff; font-family: 'Atkinson Hyperlegible Next', system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; border-radius: 0; }"
+    },
+    {
+      "name": "Level Ramp",
+      "kind": "custom",
+      "refersTo": "level-bar",
+      "description": "Six rising square bars A1 to C2; the selected bar fills das green.",
+      "html": "<div class=\"ds-ramp\"><button>A1</button><button>A2</button><button aria-pressed=\"true\">B1</button><button>B2</button><button>C1</button><button>C2</button></div>",
+      "css": ".ds-ramp { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); align-items: end; gap: 6px; height: 260px; } .ds-ramp button { display: flex; align-items: flex-end; padding: 12px; border: 2px solid #1b2547; border-radius: 0; background: #e3f5ec; color: #1b2547; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-ramp button:nth-child(1) { height: 30%; } .ds-ramp button:nth-child(2) { height: 44%; } .ds-ramp button:nth-child(3) { height: 58%; } .ds-ramp button:nth-child(4) { height: 72%; } .ds-ramp button:nth-child(5) { height: 86%; } .ds-ramp button:nth-child(6) { height: 100%; } .ds-ramp button:hover { background: #c5ead8; } .ds-ramp button[aria-pressed=\"true\"] { background: #33a873; } .ds-ramp button:focus-visible { outline: 3px solid #1b2547; outline-offset: 3px; }"
+    },
+    {
+      "name": "Trial Panel",
+      "kind": "card",
+      "refersTo": "trial-panel",
+      "description": "die Probestunde: a flat die-rose block with a small lockup, one line and the ink button.",
+      "html": "<div class=\"ds-trial\"><p class=\"ds-trial-lockup\" lang=\"de\"><span>die</span> Probestunde</p><p>Your first online lesson is free. The free trial applies to online lessons only.</p><a class=\"ds-trial-btn\" href=\"#\">Book it</a></div>",
+      "css": ".ds-trial { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 20px 40px; padding: 32px; background: #e86fa5; color: #1b2547; border-radius: 0; font-family: 'Atkinson Hyperlegible Next', system-ui, sans-serif; } .ds-trial p { margin: 0; } .ds-trial-lockup { font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; } .ds-trial-lockup span { font-size: 3rem; font-weight: 800; letter-spacing: -0.035em; } .ds-trial-btn { display: inline-flex; align-items: center; min-height: 56px; padding: 0 1.5rem; background: #1b2547; color: #fff; border: 2px solid #1b2547; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; text-decoration: none; transition: background-color 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-trial-btn:hover { background: #fff; color: #1b2547; } .ds-trial-btn:focus-visible { outline: 3px solid #1b2547; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Article Colours",
+    "overview": "Every German learner memorises nouns with a colour: der blue, die rose, das green. This system turns that classroom code into the whole visual language. Each section is a German noun, and its grammatical article decides its colour, so colour always carries meaning and never decorates. The page is built from full-bleed flat fields of those three colours, indigo ink and white paper, divided by 2px ink rules and set in a heavy, tightly tracked grotesque.\n\nThe density is generous and confident: big type, long rules, few elements per field. Depth comes only from colour fields meeting at hard edges, never from shadow, gradient or rounding. Motion is short and purposeful: the three hero fields wipe in once along the article order, and the quiz floods its strip with the right article's colour.\n\nThe user's steer rules out the German flag palette completely. No black, red or gold appears anywhere; the darkest value is indigo ink.",
+    "keyCharacteristics": [
+      "Colour is grammar: der blue, die rose, das green, chosen by each section's noun.",
+      "Full-bleed flat fields with hard edges; no radius, shadow or gradient anywhere.",
+      "Every section header is a lockup: the article huge, the German noun beside it, an English gloss below.",
+      "2px ink rules structure lists, tables and accordions.",
+      "Bricolage Grotesque at 700 to 800 for display; Atkinson Hyperlegible Next for reading."
+    ],
+    "rules": [
+      { "name": "The Article Decides Rule", "body": "A section's colour comes from its German noun's grammatical gender, never from taste. Name the noun first, then take the colour: der → blue, die → rose, das → green. A new section with no fitting noun stays on paper.", "section": "colors" },
+      { "name": "The No Flag Rule", "body": "No black, red or gold, ever, not even as an accent, tint or hover. The darkest value in the system is Indigo Ink.", "section": "colors" },
+      { "name": "The Ink on Light Fields Rule", "body": "Text on die rose and das green is ink; text on der blue is white. On paper, a coloured article uses its deepened \"on paper\" value, never the field value.", "section": "colors" },
+      { "name": "The Lockup Rule", "body": "Every section header is a lockup: the article in Article type, the noun beside it on the same baseline, the English gloss on its own line beneath. German words carry `lang=\"de\"`.", "section": "typography" },
+      { "name": "The Two Voices Rule", "body": "Display type is Bricolage at 700 or 800 only; reading text is Atkinson at 400, with 700 for emphasis. Never set paragraphs in Bricolage.", "section": "typography" },
+      { "name": "The Flat Field Rule", "body": "Separate things with a colour change or a 2px rule, never with a shadow or a gradient.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** pick every coloured section's field by its German noun's article: der #2f5fd0, die #e86fa5, das #33a873.",
+      "**Do** set every section header as an article + noun + gloss lockup, with `lang=\"de\"` on the German.",
+      "**Do** use ink (#1b2547) text on die rose and das green, and white text on der blue.",
+      "**Do** use the deepened values (die #c13f7c, das #1f7d52) when an article colour is text on white.",
+      "**Do** structure lists, tables and accordions with 2px rules.",
+      "**Do** keep every corner square and every surface flat.",
+      "**Do** use cubic-bezier(0.16, 1, 0.3, 1) for transitions, and turn off the field wipe and smooth scroll under prefers-reduced-motion."
+    ],
+    "donts": [
+      "**Don't** use black, red or gold anywhere, including tints, hovers, shadows or illustrations. Those are the German flag colours and the user ruled them out.",
+      "**Don't** use a gender colour for decoration or for a section whose noun has a different article.",
+      "**Don't** add border radius, drop shadows or gradients.",
+      "**Don't** set body paragraphs in Bricolage Grotesque.",
+      "**Don't** put white text on die rose or das green."
+    ]
+  }
+}
